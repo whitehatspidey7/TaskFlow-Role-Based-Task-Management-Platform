@@ -2,8 +2,10 @@ import { Toaster } from 'sonner'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import User from './pages/User'
-import { Routes, Route, Navigate, Outlet, userLocation } from react-router-dom
-import { useLocation } from 'react-router-dom'
+import Task from './pages/Task'
+import Trash from './pages/Trash'
+import TaskDetails from './pages/TaskDetails'
+import { Routes, Route, Navigate, Outlet, useLocation } from 'react-router-dom'
 
 
 function Layout()
@@ -51,6 +53,7 @@ const App = () => {
                 <Route path='/team' element={<User />} />
                 <Route path='/trash' element={<Trash />} />
                 <Route path='/task/:id' element={<TaskDetails />} />
+
               </Route>
               
               <Route path='/login' element={<Login />}/>
